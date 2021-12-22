@@ -1,24 +1,40 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import Button from "./Components/EventProps/Button";
+import Input from "./Components/EventProps/Input";
+import Heading from "./Components/Props/Heading";
+import Oscar from "./Components/Props/Oscar";
+import PersonList from "./Components/Props/PersonList";
+import User from "./Components/States/User";
 
 function App() {
+  const nameList = [
+    {
+      first: "Bruce",
+      last: "Wayne",
+    },
+    {
+      first: "Clark",
+      last: "Kent",
+    },
+    {
+      first: "Princess",
+      last: "Diana",
+    },
+  ];
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <PersonList names={nameList} />
+      <Oscar>
+        <Heading>this is a placeholder text</Heading>
+      </Oscar>
+      <Button
+        handleClick={(event, id) => {
+          console.log("i am clicked", event, id);
+        }}
+      ></Button>
+      <Input />
+      <User />
     </div>
   );
 }

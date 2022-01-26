@@ -1,11 +1,14 @@
 import React from "react";
-
-type personListProps = {
-  names: {
-    first: string;
-    last: string;
-  }[];
-};
+import { IpersonList } from "../Types";
+// type personListProps = {
+//   names: {
+//     first: string;
+//     last: string;
+//   }[];
+// };
+interface personListProps {
+  names: IpersonList[];
+}
 const PersonList = (props: personListProps) => {
   return (
     <div>

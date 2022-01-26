@@ -1,16 +1,10 @@
 import React from "react";
-type inputChange={
-  
-}
-const Input = ({ value }: inputChange) => {
-  const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    console.log(event.target.value);
-  };
+import { Iinput } from "../Types";
+
+const Input = ({ handleChange }: Iinput) => {
   return (
     <div>
-      <form action="">
-        <input type="text" value={value} onChange={handleInputChange} />
-      </form>
+      <input type="text" onChange={(event) => handleChange(event)} />
     </div>
   );
 };

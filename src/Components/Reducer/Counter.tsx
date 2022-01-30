@@ -24,7 +24,7 @@ const reducer = (state: counterState, action: counterAction) => {
   }
 };
 
-export const counter = () => {
+export const Counter = () => {
   // eslint-disable-next-line react-hooks/rules-of-hooks
   const [state, dispatch] = useReducer(reducer, initialState);
   return (
